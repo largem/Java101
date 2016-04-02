@@ -1,9 +1,9 @@
 package net.largem.java101;
 
-public class BasicClass {
+public class Class101 {
 	private int value;
 	
-	public BasicClass(int value) {
+	public Class101(int value) {
 		this.value = value;
 	}
 

@@ -4,11 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class BasicClassTest {
+public class Class101Test {
 
 	@Test
-	public void testBasicClass() {
-		BasicClass c = new BasicClass(0);
+	public void testClass101() {
+		Class101 c = new Class101(0);
 		assertEquals(0, c.getValue());
 	}
 
