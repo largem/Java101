@@ -1,6 +1,10 @@
-package net.largem.java101;
+package net.largem.java101.class101;
 
 public class Class101 {
+	public static void main(String[] args){
+		
+	}
+	
 	private int value;
 	
 	public Class101(int value) {
