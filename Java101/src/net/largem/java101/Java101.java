@@ -1,10 +1,16 @@
 package net.largem.java101;
 
+import net.largem.java101.class101.*;
+
 // Coming from C++, so this file contains Java specific language feature
 // 
 // 1. reference
-// 2. const reference, how Java works.
-// 3. 
+// 2. const reference, how Java works with it.
+// 3. Numbers, Strings
+// 4. boxing
+// 5. Operators
+// 6. Control flow
+
 
 public class Java101 {
 	
@@ -13,6 +19,7 @@ public class Java101 {
 		System.out.println("Hello World");
 		
 		understandJavaReference();
+		Class101.main(null);
 	}
 	
 	private static void understandJavaReference() {
@@ -32,3 +39,4 @@ public class Java101 {
 		System.out.println("change arg to: " + in);
 	}
 }
+
