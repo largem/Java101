@@ -1,0 +1,6 @@
+- Useful website
+  + **Collected Java Practices**
+    http://www.javapractices.com/home/HomeAction.do
+  + Use interface references to Collections
+    http://www.javapractices.com/topic/TopicAction.do?Id=26
+  
