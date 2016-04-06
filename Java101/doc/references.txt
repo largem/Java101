@@ -3,6 +3,8 @@
     http://www.javapractices.com/home/HomeAction.do
   + Use interface references to Collections
     http://www.javapractices.com/topic/TopicAction.do?Id=26
+  + JDBC tutorial
+    http://www.tutorialspoint.com/jdbc/index.htm
 
 - Useful download websites
   + IT EBooks https://it-ebooks24.com/
