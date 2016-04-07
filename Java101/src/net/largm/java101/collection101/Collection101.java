@@ -16,6 +16,8 @@ public class Collection101 {
 
 	public static void main(String[] args) {
 		Common.logMe(Collection101.class);
+		
+		Set101.main(args);
 	}
 }
 

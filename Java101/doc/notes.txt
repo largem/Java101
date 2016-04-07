@@ -1,0 +1,8 @@
+Tips
+- Stop a running program in Eclipse
+  In debug perspective, click the terminal.
+  
+- Auto generate comment for javadoc
+  In Package Explorer or Outline view, select the class, method, right click, 
+  Source/Generate Element Comment (shift-alt-j)
+  
