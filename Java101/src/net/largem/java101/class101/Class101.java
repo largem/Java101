@@ -12,23 +12,23 @@ import net.largem.common.Common;
 
 
 public class Class101 {
-	//It is very good that every class can have main function, which can run by its own, or 
-	//+ call by other class.
-	public static void main(String[] args){
-		Common.logMe(Class101.class);
-	}
-	
-	private int value;
-	
-	public Class101(int value) {
-		this.value = value;
-	}
+    //It is very good that every class can have main function, which can run by its own, or
+    //+ call by other class.
+    public static void main(String[] args) {
+        Common.logMe(Class101.class);
+    }
 
-	public int getValue() {
-		return value;
-	}
+    private int value;
 
-	public void setValue(int value) {
-		this.value = value;
-	}
+    public Class101(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
 }
