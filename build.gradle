@@ -1,0 +1,3 @@
+pply plugin: 'idea'
+//and standard one
+apply plugin: 'java'

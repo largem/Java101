@@ -1,0 +1,13 @@
+- Useful Study website
+  + **Collected Java Practices**
+    http://www.javapractices.com/home/HomeAction.do
+  + Use interface references to Collections
+    http://www.javapractices.com/topic/TopicAction.do?Id=26
+  + JDBC tutorial
+    http://www.tutorialspoint.com/jdbc/index.htm
+
+- Useful download websites
+  + IT EBooks https://it-ebooks24.com/
+  + programming-ebooks on github, https://github.com/HackathonHackers/programming-ebooks
+    Find the book you want, click "raw" to download it. The url like below
+  https://raw.githubusercontent.com/HackathonHackers/programming-ebooks/master/Java/Effective%20Java%20(2nd%20Edition).pdf
