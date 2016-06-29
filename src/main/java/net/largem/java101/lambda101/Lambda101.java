@@ -1,5 +1,6 @@
 package net.largem.java101.lambda101;
 
+import javax.rmi.CORBA.Util;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class Lambda101 {
         lambdasPractice3_1();
         lambdasPractice3_2();
         lambdasPractice3_3();
+        lambdasPractice4();
     }
 
     private static void basicLambdas1_1() {
@@ -91,6 +93,16 @@ public class Lambda101 {
         System.out.println(Utils.transfromedList(words, s -> s+"!"));
         System.out.println(Utils.transfromedList(words, s -> s.replace("i", "eye")));
         System.out.println(Utils.transfromedList(words, String::toUpperCase));
+
+        //Generalic
+        System.out.println(Utils.transfromedList(words, String::length));
+    }
+
+    private static void lambdasPractice4() {
+        List<String> words = Arrays.asList("hi", "hello", "bye", "thank you");
+
+        System.out.println(Utils.firstAllMatch(words.stream(), w -> w.contains("o"), w->w.length()>5));
+        System.out.println(Utils.firstAnyMatch(words.stream(), w -> w.contains("o"), w->w.length()>1));
     }
 
 }
