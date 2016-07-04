@@ -3,6 +3,7 @@ package net.largem.java101;
 import net.largem.java101.class101.Class101;
 import net.largem.java101.access101.Access101;
 import net.largem.java101.lambda101.Lambda101;
+import net.largem.java101.streams101.Streams101;
 
 // Coming from C++, so this file contains Java specific language feature
 // 
@@ -24,6 +25,7 @@ public class Java101 {
         Class101.main(null);
         Access101.main(null);
         Lambda101.main(null);
+        Streams101.main(null);
     }
 
     private static void understandJavaReference() {
