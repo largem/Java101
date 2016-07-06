@@ -4,7 +4,6 @@
 package net.largem.java101.collection101;
 
 import net.largem.common.Common;
-import sun.jvm.hotspot.utilities.Assert;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -86,8 +85,6 @@ public class List101 {
         l2.add("A"); l2.add("D"); l2.add("C"); l2.add("B");
 
         l2.stream().forEach(System.out::println);
-
-
     }
 
 }
