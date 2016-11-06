@@ -1,6 +1,5 @@
 package net.largem.java101.lambda101;
 
-import javax.rmi.CORBA.Util;
 import java.util.Arrays;
 import java.util.List;
 
@@ -65,7 +64,7 @@ public class Lambda101 {
         //https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html
         String[] arrStrings = {"aaa", "four", "long string", "s", "has e"};
 
-        Arrays.sort(arrStrings, (s1, s2) -> Utils.basicLambdasHelper(s1, s2));
+        Arrays.sort(arrStrings, Utils::basicLambdasHelper);
         System.out.println(Arrays.asList(arrStrings));
 
         //user method reference instead. Same effect as the lambda above
@@ -90,12 +89,12 @@ public class Lambda101 {
     private static void lambdasPractice3_3() {
         List<String> words = Arrays.asList("hi", "hello", "bye", "thank you");
 
-        System.out.println(Utils.transfromedList(words, s -> s+"!"));
-        System.out.println(Utils.transfromedList(words, s -> s.replace("i", "eye")));
-        System.out.println(Utils.transfromedList(words, String::toUpperCase));
+        System.out.println(Utils.transformedList(words, s -> s+"!"));
+        System.out.println(Utils.transformedList(words, s -> s.replace("i", "eye")));
+        System.out.println(Utils.transformedList(words, String::toUpperCase));
 
-        //Generalic
-        System.out.println(Utils.transfromedList(words, String::length));
+        //Generic
+        System.out.println(Utils.transformedList(words, String::length));
     }
 
     private static void lambdasPractice4() {

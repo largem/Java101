@@ -1,6 +1,14 @@
 apply plugin: 'idea'
 apply plugin: 'java'
 
+repositories {
+    mavenCentral()
+}
 
 
+dependencies {
+    compile 'com.google.guava:guava:20.0'
+    compile 'junit:junit:4.12'
+    compile 'org.hamcrest:hamcrest-library:1.3'
+}
 
