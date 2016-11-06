@@ -1,4 +1,6 @@
-//apply plugin: 'idea'
-//and standard one
+apply plugin: 'idea'
 apply plugin: 'java'
+
+
+
 

@@ -41,10 +41,10 @@ public class Streams101 {
 
         /* 3
         In the previous exercise, we produced transformed lists like this:
-        • List<String> excitingWords = StringUtils.transformedList(words, s -> s + "!");
-        • List<String> eyeWords = StringUtils.transformedList(words, s -> s.replace("i", "eye"));
-        • List<String> upperCaseWords = StringUtils.transformedList(words, String::toUpperCase);
-        Produce the same lists as above, but this time use streams and the builtin “map” method.
+        - List<String> excitingWords = StringUtils.transformedList(words, s -> s + "!");
+        - List<String> eyeWords = StringUtils.transformedList(words, s -> s.replace("i", "eye"));
+        - List<String> upperCaseWords = StringUtils.transformedList(words, String::toUpperCase);
+        Produce the same lists as above, but this time use streams and the builtin "map" method.
         */
         System.out.println(words.stream().map(e->e+"!").collect(Collectors.toList()));
         System.out.println(words.stream().map(e->e.replace("i", "eye")).collect(Collectors.toList()));
@@ -52,10 +52,10 @@ public class Streams101 {
 
         /* 4
          In the previous exercise, we produced filtered lists like this:
-        • List<String> shortWords = StringUtils.allMatches(words, s -> s.length() < 4);
-        • List<String> wordsWithB = StringUtils.allMatches(words, s -> s.contains("b"));
-        • List<String> evenLengthWords = StringUtils.allMatches(words, s -> (s.length() % 2) == 0);
-        Produce the same lists as above, but this time use “filter”.
+        - List<String> shortWords = StringUtils.allMatches(words, s -> s.length() < 4);
+        - List<String> wordsWithB = StringUtils.allMatches(words, s -> s.contains("b"));
+        - List<String> evenLengthWords = StringUtils.allMatches(words, s -> (s.length() % 2) == 0);
+        Produce the same lists as above, but this time use "filter".
         */
         System.out.println(words.stream().filter(e -> e.length()<7).collect(Collectors.toList()));
         System.out.println(words.stream().filter(e -> e.contains("o")).collect(Collectors.toList()));
@@ -63,9 +63,9 @@ public class Streams101 {
 
         /* 5
         Turn the strings into uppercase, keep only the ones that are shorter than 7 characters, of what is
-        remaining, keep only the ones that contain “O”, and print the first result. Repeat the process, except
-        checking for a “N” instead of an “O”. When checking for the “N”, try to avoid repeating all the
-        code from when you checked for an “O”.
+        remaining, keep only the ones that contain "O", and print the first result. Repeat the process, except
+        checking for a "N" instead of an "O". When checking for the "N", try to avoid repeating all the
+        code from when you checked for an "O".
         */
         /*
         System.out.println(words.stream()
@@ -131,7 +131,7 @@ public class Streams101 {
 
         /*
         Produce a String that is all the words concatenated together, but with commas in between. E.g., the
-        result should be "hi,hello,...". Note that there is no comma at the beginning, before “hi”, and also no
+        result should be "hi,hello,...". Note that there is no comma at the beginning, before "hi", and also no
         comma at the end, after the last word. Major hint: there are two versions of reduce discussed in the
         notes
          */
@@ -143,7 +143,7 @@ public class Streams101 {
         System.out.println(words.stream().mapToInt(String::length).sum());
 
         /*
-        Find the number of words that contain an “h”.
+        Find the number of words that contain an "h".
          */
         System.out.println(words.stream().filter(s->s.contains("n")).mapToInt(s->1).sum());
         System.out.println(words.stream().filter(s->s.contains("n")).count());
@@ -152,7 +152,7 @@ public class Streams101 {
     private static void exercise_part3() {
         /* 1
         Make a very large array of random doubles, each of which ranges from 0 to 1. A quick and easy
-        way to do this is with “new Random().doubles(size).toArray()”.
+        way to do this is with "new Random().doubles(size).toArray()".
          */
 
         double[] doubles = new Random().doubles(100_000_000).toArray();
@@ -175,8 +175,8 @@ public class Streams101 {
         System.out.println("sum of 1m double's sqrt is " + paraSum);
 
         /* 4
-        Verify that you get the “same” answer with the parallel approach as with the sequential approach.
-        Why do I have “same” in quotes in the previous sentence?
+        Verify that you get the "same" answer with the parallel approach as with the sequential approach.
+        Why do I have "same" in quotes in the previous sentence?
          */
         System.out.println("Difference of two sums is " + (paraSum - sum));
 
@@ -202,10 +202,10 @@ public class Streams101 {
         });
 
         /* 6
-        Make an “infinite” stream that generates random doubles between 0 and 10. Use it to
-        • Print 5 random doubles
-        • Make a List of 10 random doubles
-        • Make an array of 20 random doubles
+        Make an "infinite" stream that generates random doubles between 0 and 10. Use it to
+        - Print 5 random doubles
+        - Make a List of 10 random doubles
+        - Make an array of 20 random doubles
         Note: in previous exercises, you printed an array by doing
             System.out.println(Arrays.asList(yourArray));
         This trick only works for arrays of objects, so it does not work if you have a double[], only if you

@@ -20,7 +20,7 @@ public class Lambda101 {
     }
 
     private static void basicLambdas1_1() {
-        // Make an array containging a few Strings, and Sort it by different ways
+        // Make an array containing a few Strings, and Sort it by different ways
 
         String[] arrStrings = {"aaa", "four", "long string", "s", "has e"};
 
@@ -32,7 +32,7 @@ public class Lambda101 {
         Arrays.sort(arrStrings, (s1, s2) -> s2.length() - s1.length());
         System.out.println(Arrays.asList(arrStrings));
 
-        //sort by alphabetically by the first charactor only
+        //sort by alphabetically by the first character only
         Arrays.sort(arrStrings, (s1, s2) -> s1.charAt(0) - s2.charAt(0));
         System.out.println(Arrays.asList(arrStrings));
 
