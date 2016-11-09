@@ -13,7 +13,9 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by James Tan on 11/8/2016.
  */
-
+// The Splitter class performs the inverse of the functions of the Joiner class.
+// A Splitter class can split on a single character, a fixed string, a java.util.regex.Pattern package,
+// a string representing a regular expression, or a CharMatcher class.
 public final class Splitter101 {
 
     @Test
@@ -24,6 +26,7 @@ public final class Splitter101 {
         final Splitter splitter1 = Splitter.on(",");
 
         final Iterable<String> parts1 = splitter1.split(testString);
+        // use Iterables to get most from Iterable.
         assertThat(Iterables.size(parts1), is(7)); //contain all the empty parts
         assertThat(Iterables.get(parts1, 0), is("Monday"));
         assertThat(Iterables.get(parts1, 1), is("Tuesday "));
