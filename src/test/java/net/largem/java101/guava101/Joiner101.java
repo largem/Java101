@@ -27,7 +27,7 @@ import static org.junit.Assert.fail;
  * will always return a new Joiner, which you must use to get the desired semantics.
  * This makes any Joiner thread safe, and usable as a static final constant.
  */
-public class Joiner101 {
+public final class Joiner101 {
     private final static List<String> stringListWithNull =
             Collections.unmodifiableList(Arrays.asList(
                     "string1", null, "string2", "string3"));
