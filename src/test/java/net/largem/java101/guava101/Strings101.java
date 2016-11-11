@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
 public class Strings101 {
 
     @Test
-    public void test01()
+    public void example_null_empty()
     {
         // empty to null
         assertThat(Strings.emptyToNull(""), is(nullValue()));
@@ -30,6 +30,29 @@ public class Strings101 {
         assertThat(Strings.isNullOrEmpty(null), is(true));
         assertThat(Strings.isNullOrEmpty(""), is(true));
         assertThat(Strings.isNullOrEmpty(" "), is(false));
+    }
 
+    @Test
+    public void example_padding()
+    {
+        //pad end
+        assertThat(Strings.padEnd("foo", 6, 'x'), is("fooxxx"));
+        //won't pad if the minimum length is reached.
+        assertThat(Strings.padEnd("foobar", 6, 'x'), is("foobar"));
+
+        assertThat(Strings.padStart("foo", 6, 'x'), is("xxxfoo"));
+        assertThat(Strings.padStart("foobar", 6, 'x'), is("foobar"));
+    }
+
+    @Test
+    public void example_misc()
+    {
+        assertThat(Strings.repeat("abc", 2), is("abcabc"));
+
+        assertThat(Strings.commonPrefix("abcdcba", "abccba"), is("abc"));
+        assertThat(Strings.commonPrefix("abc", "bcd"), is(""));
+
+        assertThat(Strings.commonSuffix("abcdcba", "abccba"), is("cba"));
+        assertThat(Strings.commonSuffix("abc", "bcd"), is(""));
     }
 }
