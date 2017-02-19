@@ -1,3 +1,13 @@
+Project Structure [Java 101]
+- java101, java basic feature learning
+- collection101, all collection related.
+- java8_101, java8 related new feature learning, lambda, stream
+- guava101, guava related, immutable collections, optional, etc.
+- json101, Json related
+- thread101, multi-thread related
+-
+
+
 Tips
 - Stop a running program in Eclipse
   In debug perspective, click the terminal.
