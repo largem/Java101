@@ -1,10 +1,11 @@
 package net.largem.java101.streams101;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Maps;
 import net.largem.common.Op;
+import net.largem.java101.guava101.immutable101.Immutable101;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -18,9 +19,31 @@ import java.util.stream.Stream;
  */
 public class Streams101 {
     public static void main(String[] args) {
+        word_count();
         exercise_part1();
         exercise_part2();
         exercise_part3();
+    }
+
+    private static void word_count()
+    {
+        final ImmutableList<String> article = ImmutableList.of("a", "b", "A", "abc", "ABC");
+
+        final Map<String, Integer> wordCount = Maps.newConcurrentMap();
+
+        article.parallelStream()
+            .map(w -> w.toUpperCase(Locale.ENGLISH))
+            .forEach( w ->
+            {
+                if(wordCount.containsKey(w)) {
+                    wordCount.put(w, wordCount.get(w)+1);
+                }
+                else {
+                    wordCount.put(w, 1);
+                }
+            });
+
+        System.out.println(wordCount);
     }
 
     private static void exercise_part1() {

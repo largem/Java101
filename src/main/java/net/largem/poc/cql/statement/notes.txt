@@ -1,0 +1,72 @@
+1. how to build prepared statement correctly.
+   variable and ? must match with each other.
+
+   insert statement: three parts
+        - table name
+        - insert fields
+        - insert values ( as place holder '?' first and bind later),
+          number of ? equals number of fields to insert. So, ? can calculated from fields.
+
+   update statement: four parts
+        - table name
+        - update fields
+        - update values ( as place holder '?' first and bind later)
+          number of ? matches number of fields to update
+        - where clause (restrictions).
+          see where clause section below.
+
+        * there is a special case of update, increasing and decreasing of counter fields,
+        ? for increasing/decreasing step, but the clause itself will be slightly different (so define separately).
+
+    select statement: more parts
+        - table name
+        - select fields (can be wildcard, or aggregation function)
+        - where clause (optional, but usually has)
+        - order by (optional)
+        - allow filtering (optional)
+
+1.1 where clause[1,2]
+    restriction on partition key: only '=' and 'IN' (can use token(key) with other operator, but won't get something
+    we need). And restrict all partition keys or none of them.
+
+    restriction on cluster columns support ‘=, IN, >, >=, <=, <, CONTAINS and CONTAINS KEY' operators,
+    the last two can only be used on collections when the query is using a secondary index.
+
+    Also, the restriction can not be more strict in the direction of cluster keys. For example, you have two cluster
+    keys, k1, k2(in direction).
+    you can do k1=? AND k2>?, but you can not do k1>? AND K2=?
+
+    restriction on regular column, any other than 'IN' is supported, but query must be a secondary index query.
+
+    direct secondary index query, only '=', CONTAINS, CONTAINS KEY are allowed.
+    secondary index filtering, the other operators are allowed
+
+1.2 create where clause
+    To simplify, build a list of relations (restriction on field), which include the field (or function on field) and
+    operation. List<Entry> can do the job. operator can be defined as ENUM.
+
+2. how to combine prepare statement and data binding together to keep consistence.
+3. how to combine result extractor to the statement.
+
+   define a class, contains prepared statement, data binding function, and result extraction function.
+
+   the function call run will have all the data for binding.
+   run( preparedStatement, (prepareStatement) -> binding function, (row) -> extractor, consumer of pagination).
+
+   return is list<T>, T is the return type of extractor.
+
+4. simple run and batch run
+    batch run usually is used for insert and update, no result set is needed.
+
+5. pagination
+
+
+* reference
+1. A deep look at the CQL WHERE clause
+[http://www.datastax.com/dev/blog/a-deep-look-to-the-cql-where-clause]
+
+2. How to bind IN-clause values in a CQL 3 prepared statement?
+[http://stackoverflow.com/questions/35069238/how-to-bind-in-clause-values-in-a-cql-3-prepared-statement]
+The correct syntax is SELECT * FROM mytable WHERE id IN ? (without parens around the ?).
+This will allow you to pass a list of UUIDs to bind to that single query parameter.
+

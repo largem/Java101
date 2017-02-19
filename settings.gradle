@@ -1,0 +1,4 @@
+include 'java101', 'json101'
+
+project(':java101').buildFileName = 'java101.gradle'
+project(':json101').buildFileName = 'json101.gradle'

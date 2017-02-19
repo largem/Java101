@@ -15,6 +15,8 @@ public class Executor101 {
             System.out.println("I am running in " + threadName);
                 }
         );
+
+        exe.shutdown();
     }
 
 }
