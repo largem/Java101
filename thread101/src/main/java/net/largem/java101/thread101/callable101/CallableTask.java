@@ -5,11 +5,11 @@ import java.util.concurrent.Callable;
 /**
  * Created by James Tan on 2/7/2017.
  */
-public class Task implements Callable<Integer> {
+public class CallableTask implements Callable<Integer> {
 
     private final int value;
 
-    public Task(int value) {
+    public CallableTask(int value) {
         this.value = value;
     }
 

@@ -22,7 +22,7 @@ public final class Callable101 {
     {
         ExecutorService exe = Executors.newSingleThreadExecutor();
 
-        Future<Integer> result = exe.submit(new Task(1));
+        Future<Integer> result = exe.submit(new CallableTask(1));
 
         System.out.println(result.get());
 

@@ -3,6 +3,10 @@ package net.largem.java101;
 import net.largem.java101.access101.Access101;
 import net.largem.java101.class101.Class101;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
+
 // Coming from C++, so this file contains Java specific language feature
 // 
 // 1. reference
@@ -23,8 +27,9 @@ public class Java101 {
         understandJavaReference();
         Class101.main(null);
         Access101.main(null);
-
     }
+
+
 
     private static void understandJavaReference() {
         //Java argument of a method/function is always pass as value
