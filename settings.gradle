@@ -1,4 +1,4 @@
-include 'java101', 'collection101', 'java8_101', 'generic101', 'thread101', 'guava101', 'json101'
+include 'java101', 'collection101', 'java8_101', 'generic101', 'thread101', 'guava101', 'json101', 'effective-java'
 
 project(':java101').buildFileName = 'java101.gradle'
 project(':collection101').buildFileName = 'collection101.gradle'
@@ -7,3 +7,4 @@ project(':generic101').buildFileName = 'generic101.gradle'
 project(':thread101').buildFileName = 'thread101.gradle'
 project(':guava101').buildFileName = 'guava101.gradle'
 project(':json101').buildFileName = 'json101.gradle'
+project(':effective-java').buildFileName = 'effective-java.gradle'
