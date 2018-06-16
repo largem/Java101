@@ -4,13 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-import org.junit.Test;
 
 public class ConcurrentMap101 {
 
-  @Test
-  public void ConcurrentMapBasicOperation()
-  {
+  public static void main(String[] args) {
     final ConcurrentMap<String, Map<String, String>> map = new ConcurrentHashMap<>();
 
     //can't do it in one shot? putIfAbsent will return null if key does not exist.
