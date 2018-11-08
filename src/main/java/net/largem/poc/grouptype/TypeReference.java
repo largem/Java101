@@ -1,9 +1,6 @@
 package net.largem.poc.grouptype;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
+import java.lang.reflect.*;
 
 /**
  * References a generic type.
@@ -35,7 +32,10 @@ public abstract class TypeReference<T> {
             Class<?> rawType = type instanceof Class<?>
                     ? (Class<?>) type
                     : (Class<?>) ((ParameterizedType) type).getRawType();
-            constructor = rawType.getConstructor();
+            constructor = rawType.getDeclaredConstructor();
+            if (Modifier.isPrivate(constructor.getModifiers())) {
+                constructor.setAccessible(true);
+            }
         }
         return (T) constructor.newInstance();
     }

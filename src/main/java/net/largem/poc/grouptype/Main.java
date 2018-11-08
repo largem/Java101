@@ -2,6 +2,7 @@ package net.largem.poc.grouptype;
 
 import com.google.common.collect.ImmutableList;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Main {
@@ -19,5 +20,15 @@ public class Main {
             System.out.println("Name:" + e.getName());
         });
     }
+
+    private static final class CaseType<T> extends AbstractSafetyType<T> {
+        public static CaseType<String> StringType = SafetyType.of(new TypeReference<CaseType<String>>() {
+        }, "StringFieldName", ValueType.STRING);
+        public static CaseType<BigDecimal> NumberType = SafetyType.of(new TypeReference<CaseType<BigDecimal>>() {
+        }, "NumberFieldName", ValueType.NUMBER);
+        public static CaseType<List<String>> ListType = SafetyType.of(new TypeReference<CaseType<List<String>>>() {
+        }, "ListFieldName", ValueType.LIST);
+    }
+
 
 }
