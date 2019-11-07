@@ -1,0 +1,1 @@
+This package is to find a way to save elements with different types into the single container.
