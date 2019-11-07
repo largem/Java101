@@ -1,13 +1,15 @@
 package net.largem.poc.dal;
 
+import com.google.common.collect.ImmutableSet;
+
 import java.util.*;
 
 public class DynamicRecord implements Record {
-    private Set<Field<?>> fields;
+    private ImmutableSet<Field<?>> fields;
     private Map<Field<?>, Object> values = new HashMap<>();
 
     public DynamicRecord(Set<Field<?>> fields) {
-        this.fields = new HashSet<>(fields);
+        this.fields = ImmutableSet.copyOf(fields);
     }
 
     @Override
@@ -26,5 +28,10 @@ public class DynamicRecord implements Record {
         }
 
         return field.getValue(values.get(field));
+    }
+
+    @Override
+    public Set<Field<?>> getFields() {
+        return fields;
     }
 }
