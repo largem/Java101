@@ -1,0 +1,6 @@
+3 Methods Common to All Objects . . . . . . . . . . . . . . . . . . . . 37
+Item 10: Obey the general contract when overriding equals . . . . . 37
+Item 11: Always override hashCode when you override equals . . 50
+Item 12: Always override toString . . . . . . . . . . . . . . . . . . . . . . . . 55
+Item 13: Override clone judiciously . . . . . . . . . . . . . . . . . . . . . . . . 58
+Item 14: Consider implementing Comparable . . . . . . . . . . . . . . . . 66

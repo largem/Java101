@@ -1,0 +1,8 @@
+7 Lambdas and Streams . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+Item 42: Prefer lambdas to anonymous classes . . . . . . . . . . . . . . 193
+Item 43: Prefer method references to lambdas . . . . . . . . . . . . . . . 197
+Item 44: Favor the use of standard functional interfaces . . . . . . . 199
+Item 45: Use streams judiciously . . . . . . . . . . . . . . . . . . . . . . . . . 203
+Item 46: Prefer side-effect-free functions in streams . . . . . . . . . . 210
+Item 47: Prefer Collection to Stream as a return type. . . . . . . . . . 216
+Item 48: Use caution when making streams parallel . . . . . . . . . . 222

@@ -1,0 +1,13 @@
+4 Classes and Interfaces. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+Item 15: Minimize the accessibility of classes and members . . . . . 73
+Item 16: In public classes, use accessor methods, not public fields 78
+Item 17: Minimize mutability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+Item 18: Favor composition over inheritance . . . . . . . . . . . . . . . . . 87
+viii CONTENTS
+Item 19: Design and document for inheritance or else prohibit it 93
+Item 20: Prefer interfaces to abstract classes . . . . . . . . . . . . . . . . . 99
+Item 21: Design interfaces for posterity . . . . . . . . . . . . . . . . . . . . 104
+Item 22: Use interfaces only to define types. . . . . . . . . . . . . . . . . 107
+Item 23: Prefer class hierarchies to tagged classes . . . . . . . . . . . . 109
+Item 24: Favor static member classes over nonstatic . . . . . . . . . . 112
+Item 25: Limit source files to a single top-level class . . . . . . . . . 115
