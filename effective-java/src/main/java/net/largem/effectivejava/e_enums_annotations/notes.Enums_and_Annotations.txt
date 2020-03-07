@@ -1,0 +1,9 @@
+6 Enums and Annotations . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Item 34: Use enums instead of int constants. . . . . . . . . . . . . . . . 157
+Item 35: Use instance fields instead of ordinals . . . . . . . . . . . . . . 168
+Item 36: Use EnumSet instead of bit fields . . . . . . . . . . . . . . . . . . 169
+Item 37: Use EnumMap instead of ordinal indexing. . . . . . . . . . . . 171
+Item 38: Emulate extensible enums with interfaces . . . . . . . . . . . 176
+Item 39: Prefer annotations to naming patterns . . . . . . . . . . . . . . 180
+Item 40: Consistently use the Override annotation. . . . . . . . . . . 188
+Item 41: Use marker interfaces to define types . . . . . . . . . . . . . . 191

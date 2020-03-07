@@ -1,0 +1,9 @@
+8 Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 227
+Item 49: Check parameters for validity . . . . . . . . . . . . . . . . . . . . . 227
+Item 50: Make defensive copies when needed . . . . . . . . . . . . . . . 231
+Item 51: Design method signatures carefully . . . . . . . . . . . . . . . . 236
+Item 52: Use overloading judiciously . . . . . . . . . . . . . . . . . . . . . . 238
+Item 53: Use varargs judiciously . . . . . . . . . . . . . . . . . . . . . . . . . . 245
+Item 54: Return empty collections or arrays, not nulls . . . . . . . . . 247
+Item 55: Return optionals judiciously . . . . . . . . . . . . . . . . . . . . . . 249
+Item 56: Write doc comments for all exposed API elements . . . . 254

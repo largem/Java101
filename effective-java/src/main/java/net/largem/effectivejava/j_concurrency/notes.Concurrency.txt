@@ -1,0 +1,8 @@
+11 Concurrency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 311
+Item 78: Synchronize access to shared mutable data . . . . . . . . . . 311
+Item 79: Avoid excessive synchronization . . . . . . . . . . . . . . . . . . 317
+Item 80: Prefer executors, tasks, and streams to threads . . . . . . . 323
+Item 81: Prefer concurrency utilities to wait and notify . . . . . . 325
+Item 82: Document thread safety . . . . . . . . . . . . . . . . . . . . . . . . . 330
+Item 83: Use lazy initialization judiciously . . . . . . . . . . . . . . . . . 333
+Item 84: Don’t depend on the thread scheduler . . . . . . . . . . . . . . 336

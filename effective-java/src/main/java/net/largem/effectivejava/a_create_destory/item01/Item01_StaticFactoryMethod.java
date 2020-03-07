@@ -1,7 +1,7 @@
-package net.largem.effectivejava.create_destory.item01;
+package net.largem.effectivejava.a_create_destory.item01;
 
-import net.largem.effectivejava.create_destory.item01.support.Car;
-import net.largem.effectivejava.create_destory.item01.support.Cars;
+import net.largem.effectivejava.a_create_destory.item01.support.Car;
+import net.largem.effectivejava.a_create_destory.item01.support.Cars;
 
 public final class Item01_StaticFactoryMethod {
 

@@ -1,4 +1,4 @@
-package net.largem.effectivejava.create_destory.item01.support;
+package net.largem.effectivejava.a_create_destory.item01.support;
 
 public class Cars {
 

@@ -1,0 +1,9 @@
+12 Serialization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 339
+Item 85: Prefer alternatives to Java serialization . . . . . . . . . . . . . 339
+Item 86: Implement Serializable with great caution . . . . . . . . 343
+Item 87: Consider using a custom serialized form . . . . . . . . . . . . 346
+Item 88: Write readObject methods defensively . . . . . . . . . . . . 353
+Item 89: For instance control, prefer enum types to
+readResolve . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 359
+Item 90: Consider serialization proxies instead of serialized
+instances . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 363
