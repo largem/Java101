@@ -1,25 +1,22 @@
 package net.largem.java101.mock101;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
+import org.mockito.Mockito;
+import org.powermock.api.mockito.PowerMockito;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Matchers.anyString;
-import static org.powermock.api.mockito.PowerMockito.*;
 
-@RunWith(PowerMockRunner.class)
-@PrepareForTest(fullyQualifiedNames = "net.largem.java101.mock101.*")
+//  If the mocking can be done by Mockito as well, PowerMock can fully cover but no need to use
+//+ PowerMockRunner.
 public class ProductServiceImplPowermockTest {
     private static final String TEST_VALUE = "TEST_VALUE";
 
     @Test
-    public void prodFunc_mockPrivateMethod() throws Exception {
-        ExternalService externalService = mock(ExternalService.class);
+    public void prodFunc_mockExternalService() {
+        ExternalService externalService = PowerMockito.mock(ExternalService.class);
 
-        ProductService productService = spy(new ProductServiceImpl(externalService));
-        doReturn(TEST_VALUE).when(productService, "supportFunc", anyString());
+        ProductService productService = new ProductServiceImpl(externalService);
+        PowerMockito.doReturn(TEST_VALUE).when(externalService).getValue(Mockito.anyString());
 
         assertEquals(TEST_VALUE, productService.prodFunc("abc"));
     }
