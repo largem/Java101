@@ -88,6 +88,7 @@
         <module>mock101</module>
         <module>lombok101</module>
         <module>file101</module>
+        <module>ds101</module>
     </modules>
 
 </project>
